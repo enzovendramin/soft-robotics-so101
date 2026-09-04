@@ -1,0 +1,49 @@
+# --- Python ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- LeRobot / ML outputs ---
+# Datasets, checkpoints and logs are large and belong on the Hub or a drive,
+# not in git.
+outputs/
+wandb/
+checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Calibration is machine- and arm-specific. Recalibrate rather than reuse.
+calibration/
+*.calib
+
+# --- CAD working files ---
+# Fusion source files are large and binary; export STEP/STL for the repo and
+# keep the .f3d in Fusion's own cloud project.
+*.f3d
+*.f3z
+
+# --- OS / editor ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.vscode/
+.idea/
+
+# --- Never commit ---
+# Papers are under publisher copyright -- see docs/references.md.
+Papers/
+*.pdf
+
+# Installers and other large binaries that are not project deliverables.
+*.exe
+*.msi
+*.zip

@@ -1,0 +1,13 @@
+# Dependencies for robot_tools.py, record_winch.py and replay_winch.py.
+# Developed and tested on Windows 11 with Python 3.13.
+#
+# NOTE: s0101code_simo/ does NOT run on these versions -- it targets lerobot
+# 0.4.1 on Python 3.10 and ships its own conda environment
+# (s0101code_simo/lerobot.yml). Keep the two environments separate.
+
+# The "viz" extra pulls in rerun-sdk, which --display_data needs.
+lerobot[feetech,viz]==0.6.0
+
+# Used by the keyboard controls and by ESC-to-stop in the winch modes.
+# On Windows this may require an elevated shell to capture key events.
+keyboard
